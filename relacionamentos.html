@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Relacionamentos e Vínculos — Psicanálise | Carlos Toigo</title>
+<meta name="description" content="Padrões que se repetem nos relacionamentos. Dificuldade de se aproximar ou se separar. Psicanálise para entender o que você repete nos vínculos.">
+<meta name="robots" content="noindex">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap");
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Outfit",sans-serif;background:#0c0b09;color:#e8e2d9;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(15%) contrast(1.05)}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 30%,#0c0b09 95%)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 4rem 2.5rem;position:relative;z-index:1}
+.tag{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9b7e5a;margin-bottom:2rem;display:flex;align-items:center;gap:10px}
+.tag::before{content:"";display:inline-block;width:28px;height:1px;background:#9b7e5a}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.6rem,3.8vw,3.8rem);font-weight:600;line-height:1.1;color:#f0ebe3;margin-bottom:1.25rem}
+h1 em{font-style:italic;color:#c4a06a}
+.sub{font-size:1.05rem;color:#7a7269;font-weight:300;margin-bottom:2.5rem;max-width:380px;line-height:1.8}
+.cta-grupo{display:flex;flex-direction:column;gap:10px;margin-bottom:1.75rem}
+.btn-wpp{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;font-family:"Outfit",sans-serif;font-size:1rem;font-weight:500;padding:15px 28px;border-radius:3px;text-decoration:none;transition:.2s;width:fit-content}
+.btn-wpp:hover{background:#1fba58;transform:translateY(-2px)}
+.btn-wpp svg{flex-shrink:0}
+.preco-hint{font-size:.75rem;color:#4a4540;display:flex;align-items:center;gap:6px}
+.preco-hint strong{color:#9b7e5a;font-weight:500}
+
+/* SEPARADOR */
+.sep{border:none;height:1px;background:linear-gradient(90deg,transparent,#2a2520,transparent);margin:0}
+
+/* DIFERENCIAL */
+.diferencial{padding:6rem 2rem;text-align:center;background:#0f0e0b}
+.dif-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.5;max-width:680px;margin:0 auto 1.5rem;color:#d4cdc4;font-weight:400}
+.dif-lead strong{color:#c4a06a;font-style:italic}
+.dif-body{font-size:1rem;color:#4a4540;max-width:600px;margin:0 auto;font-weight:300;line-height:1.9}
+
+/* QUEM */
+.quem{display:grid;grid-template-columns:1fr 1.5fr;max-width:1060px;margin:0 auto;padding:6rem 2rem;gap:4rem;align-items:center}
+.quem-img img{width:100%;display:block;border-radius:2px;filter:grayscale(20%) contrast(1.05)}
+.quem-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9b7e5a;display:block;margin-bottom:1rem}
+.quem h2{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:600;color:#f0ebe3;margin-bottom:1rem}
+.quem p{font-size:1rem;color:#6b6560;font-weight:300;margin-bottom:1.5rem;line-height:1.9}
+.creds{list-style:none;display:flex;flex-direction:column;gap:7px}
+.creds li{font-size:.9rem;color:#3a3530;padding-left:18px;position:relative}
+.creds li::before{content:"—";position:absolute;left:0;color:#9b7e5a}
+
+/* DEPOIMENTOS */
+.depos{background:#080807;padding:6rem 2rem}
+.section-h{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:600;text-align:center;margin-bottom:3rem;color:#d4cdc4}
+.depo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;max-width:860px;margin:0 auto;background:#1a1815}
+.depo{background:#0c0b09;padding:2rem;border-left:2px solid #2a2218}
+.depo:hover{border-left-color:#9b7e5a;transition:.3s}
+.depo blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.15rem;color:#8a8078;margin-bottom:1rem;line-height:1.7}
+.depo cite{font-size:.85rem;font-weight:500;color:#9b7e5a;letter-spacing:.05em;font-style:normal}
+
+/* COMO */
+.como{padding:6rem 2rem;max-width:660px;margin:0 auto}
+.passos{display:flex;flex-direction:column;gap:2.5rem;margin-top:.5rem}
+.passo{display:flex;gap:1.5rem;align-items:flex-start}
+.passo-n{font-family:"Cormorant Garamond",serif;font-size:3rem;font-weight:700;color:#1e1c19;line-height:1;min-width:44px}
+.passo strong{display:block;font-size:1rem;font-weight:500;color:#d4cdc4;margin-bottom:4px}
+.passo p{font-size:.95rem;color:#4a4540;font-weight:300}
+
+/* PREÇO */
+.preco-sec{background:#0f0e0b;text-align:center;padding:6rem 2rem;border-top:1px solid #1a1815}
+.preco-box{display:inline-flex;flex-direction:column;align-items:center;border:1px solid #2a2218;padding:2.5rem 4rem;border-radius:2px;margin-bottom:2rem}
+.preco-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9b7e5a;margin-bottom:.75rem}
+.preco-val{font-family:"Cormorant Garamond",serif;font-size:4rem;font-weight:700;color:#f0ebe3;line-height:1;margin-bottom:.5rem}
+.preco-det{font-size:.88rem;color:#2a2520;font-weight:300}
+.preco-desc{font-size:1rem;color:#4a4540;max-width:500px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
+.btn-wpp-lg{display:inline-flex;align-items:center;gap:12px;background:#25d366;color:#fff;font-family:"Outfit",sans-serif;font-size:1rem;font-weight:500;padding:18px 40px;border-radius:3px;text-decoration:none;transition:.2s;margin-bottom:1.5rem}
+.btn-wpp-lg:hover{background:#1fba58;transform:translateY(-2px)}
+.preco-info{font-size:.75rem;color:#2a2218;font-weight:300}
+
+/* FOOTER */
+footer{background:#080807;text-align:center;padding:1.5rem;font-size:.75rem;color:#2a2218;border-top:1px solid #141210}
+footer a{color:#3a3530;text-decoration:none}
+footer a:hover{color:#9b7e5a}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-img{height:55vw;min-height:240px}
+  .hero-img::after{background:linear-gradient(180deg,transparent 40%,#0c0b09)}
+  .hero-copy{padding:2rem 1.5rem 3.5rem}
+  .quem{grid-template-columns:1fr;padding:4rem 1.5rem;gap:2.5rem}
+  .quem-img{max-width:260px}
+  .depo-grid{grid-template-columns:1fr}
+  .preco-box{padding:2rem 2.5rem}
+  .diferencial,.depos,.como,.preco-sec{padding:4rem 1.5rem}
+}
+
+/* FADE IN */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.tag{animation:fadeUp .5s ease both}
+h1{animation:fadeUp .6s .1s ease both}
+.sub{animation:fadeUp .6s .2s ease both}
+.cta-grupo{animation:fadeUp .6s .3s ease both}
+.preco-hint{animation:fadeUp .6s .4s ease both}
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NS3MZWXK');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88ZSVDRF80"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-88ZSVDRF80');
+</script>
+<!-- End Google Analytics -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS3MZWXK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<section class="hero">
+  <div class="hero-img">
+    <img src="https://files.cdn-files-a.com/uploads/11080854/800_68cae99dbc5de.jpg" alt="Carlos Toigo — Psicanalista">
+  </div>
+  <div class="hero-copy">
+    <span class="tag">Psicanálise · Vínculos</span>
+    <h1>Os mesmos padrões.<br><em>Em cada relacionamento.</em></h1>
+    <p class="sub">Brigas que se repetem. Distância quando quer se aproximar. Dependência quando quer se libertar. O padrão tem uma lógica — e ela pode ser entendida.</p>
+    <div class="cta-grupo">
+      <a href="https://wa.me/5554984233503" class="btn-wpp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Quero entender meus padrões
+      </a>
+    </div>
+    <p class="preco-hint">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Primeira consulta <strong>R$100 · 50 minutos</strong> · Sem compromisso
+    </p>
+  </div>
+</section>
+
+
+<hr class="sep">
+
+<section class="diferencial">
+  <p class="dif-lead">A maioria das abordagens trata o sintoma.<br><strong>A psicanálise vai atrás do que o criou.</strong></p>
+  <p class="dif-body">Respiração, meditação, TCC — funcionam enquanto você está fazendo. Param de fazer, o peso volta. Porque o que está na raiz não foi tocado.<br><br>A psicanálise não silencia o sofrimento — trabalha para entender o que ele está dizendo. Quando a causa é endereçada, o sintoma não precisa mais aparecer.</p>
+</section>
+
+<section class="quem">
+  <div class="quem-img">
+    <img src="https://files.cdn-files-a.com/uploads/11080854/800_68cae99dbc5de.jpg" alt="Carlos Toigo — Psicanalista">
+  </div>
+  <div>
+    <span class="quem-label">Quem vai te atender</span>
+    <h2>Carlos A. Toigo</h2>
+    <p>Psicanalista com 10 anos de clínica. Especialização em neuropsicanálise e psicanálise contemporânea.<br><br>Atendo presencialmente em Caxias do Sul e online para todo o Brasil.</p>
+    <ul class="creds">
+      <li>Especialista em Psicanálise Lacaniana</li>
+      <li>Especialista em Neuropsicoanálise Aplicada</li>
+      <li>Psicanálise Contemporânea</li>
+      <li>Mestre em formação — supervisão e clínica</li>
+    </ul>
+  </div>
+</section>
+
+<section class="depos">
+  <h2 class="section-h">O que dizem os pacientes</h2>
+  <div class="depo-grid">
+    <div class="depo"><blockquote>"Foi a única pessoa com quem eu consigo me abrir e me entender melhor. A comunicação do Carlos é muito boa."</blockquote><cite>Maymay — Estudante de Arte</cite></div>
+    <div class="depo"><blockquote>"Gosto muito da forma como ele conduz as sessões, sempre com empatia e escuta atenta. Sinto que evoluí muito desde que comecei."</blockquote><cite>Bruna Hermes</cite></div>
+    <div class="depo"><blockquote>"Profissional incrível. É como se estivesse em casa batendo papo com seu amigo de anos. Você sai com conteúdo, um norte, uma resposta."</blockquote><cite>Nanci Mariani</cite></div>
+    <div class="depo"><blockquote>"Ótimo atendimento. Profissional ético, comprometido e capacitado. Suas abordagens me ajudaram muito."</blockquote><cite>Geraldo Rogério — Professor</cite></div>
+  </div>
+</section>
+
+<section class="como">
+  <h2 class="section-h">Como funciona</h2>
+  <div class="passos">
+    <div class="passo"><span class="passo-n">1</span><div><strong>Você manda uma mensagem no WhatsApp</strong><p>Sem formulário, sem triagem, sem espera. Você fala diretamente comigo.</p></div></div>
+    <div class="passo"><span class="passo-n">2</span><div><strong>Agendamos a primeira consulta</strong><p>50 minutos onde vou entender o que está acontecendo — sem julgamento, sem protocolo.</p></div></div>
+    <div class="passo"><span class="passo-n">3</span><div><strong>Você decide se quer continuar</strong><p>Sem compromisso. Após a primeira sessão você tem clareza sobre o que está acontecendo.</p></div></div>
+  </div>
+</section>
+
+<section class="preco-sec">
+  <div class="preco-box">
+    <span class="preco-label">Primeira consulta</span>
+    <span class="preco-val">R$ 100</span>
+    <span class="preco-det">50 minutos · Sem compromisso de continuidade</span>
+  </div>
+  <p class="preco-desc">Você não precisa continuar carregando isso sozinho. Manda uma mensagem agora — respondo pessoalmente.</p>
+  <a href="https://wa.me/5554984233503" class="btn-wpp-lg" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Agendar pelo WhatsApp
+  </a>
+  <br>
+  <p class="preco-info">Presencial em Caxias do Sul · Online para todo o Brasil · Google Meet</p>
+</section>
+
+<footer>
+  <p>© 2026 Carlos Toigo Psicanálise · <a href="https://www.toigopsicanalise.com.br" target="_blank">toigopsicanalise.com.br</a></p>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var pageName = document.title.split('—')[0].trim();
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if(typeof gtag !== 'undefined') {
+          gtag('event', 'whatsapp_click', {
+            'event_category': 'conversao',
+            'event_label': pageName,
+            'value': 1
+          });
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
