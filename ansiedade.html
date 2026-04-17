@@ -3,91 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Ansiedade — Psicanálise | Carlos Toigo · Caxias do Sul</title>
-<meta name="description" content="Você tenta controlar, respirar, relaxar — mas a ansiedade volta. Psicanálise para entender a raiz, não só o sintoma.">
+<title>Psicanalista em Caxias do Sul — Carlos Toigo | Ansiedade, Relacionamentos, Autoconhecimento</title>
+<meta name="description" content="Sou Carlos Toigo, psicanalista com 10 anos de clínica em Caxias do Sul. Atendimento presencial e online. Estou aqui para te ajudar.">
 <meta name="robots" content="noindex">
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap");
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Outfit",sans-serif;background:#0c0b09;color:#e8e2d9;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
-.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative}
+body{font-family:"Outfit",sans-serif;background:#ffffff;color:#1a2e2a;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+:root{
+  --teal:#3db8a8;
+  --teal-dark:#2a9e8e;
+  --teal-light:#e8f7f5;
+  --teal-mid:#c2ede8;
+  --text:#1a2e2a;
+  --text-mid:#4a6560;
+  --text-light:#7a9590;
+  --bg:#ffffff;
+  --bg-alt:#f5fafa;
+  --border:#d0eae7;
+}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative;background:#fff}
 .hero-img{position:relative;overflow:hidden}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(15%) contrast(1.05)}
-.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 30%,#0c0b09 95%)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,#ffffff 95%)}
 .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 4rem 2.5rem;position:relative;z-index:1}
-.tag{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9b7e5a;margin-bottom:2rem;display:flex;align-items:center;gap:10px}
-.tag::before{content:"";display:inline-block;width:28px;height:1px;background:#9b7e5a}
-h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.6rem,3.8vw,3.8rem);font-weight:600;line-height:1.1;color:#f0ebe3;margin-bottom:1.25rem}
-h1 em{font-style:italic;color:#c4a06a}
-.sub{font-size:1.05rem;color:#7a7269;font-weight:300;margin-bottom:2.5rem;max-width:380px;line-height:1.8}
-.cta-grupo{display:flex;flex-direction:column;gap:10px;margin-bottom:1.75rem}
-.btn-wpp{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;font-family:"Outfit",sans-serif;font-size:1rem;font-weight:500;padding:15px 28px;border-radius:3px;text-decoration:none;transition:.2s;width:fit-content}
-.btn-wpp:hover{background:#1fba58;transform:translateY(-2px)}
+.tag{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
+.tag::before{content:"";display:inline-block;width:28px;height:2px;background:var(--teal)}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,3.5vw,3.4rem);font-weight:700;line-height:1.15;color:var(--text);margin-bottom:1rem}
+h1 em{font-style:italic;color:var(--teal-dark)}
+.hero-apresentacao{font-size:1rem;color:var(--text-mid);font-weight:400;margin-bottom:1.5rem;max-width:400px;line-height:1.8;border-left:3px solid var(--teal);padding-left:1rem}
+.selos{display:flex;gap:.75rem;margin-bottom:2rem;flex-wrap:wrap}
+.selo{font-size:.78rem;font-weight:500;color:var(--teal-dark);background:var(--teal-light);padding:5px 12px;border-radius:20px;border:1px solid var(--teal-mid)}
+.btn-wpp{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;font-family:"Outfit",sans-serif;font-size:1rem;font-weight:600;padding:16px 32px;border-radius:6px;text-decoration:none;transition:.2s;width:fit-content;box-shadow:0 4px 16px rgba(61,184,168,.3);margin-bottom:1rem}
+.btn-wpp:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(61,184,168,.4)}
 .btn-wpp svg{flex-shrink:0}
-.preco-hint{font-size:.75rem;color:#7a7269;display:flex;align-items:center;gap:6px}
-.preco-hint strong{color:#9b7e5a;font-weight:500}
-.sep{border:none;height:1px;background:linear-gradient(90deg,transparent,#2a2520,transparent);margin:0}
-.diferencial{padding:6rem 2rem;text-align:center;background:#0f0e0b}
-.dif-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.5;max-width:680px;margin:0 auto 1.5rem;color:#d4cdc4;font-weight:400}
-.dif-lead strong{color:#c4a06a;font-style:italic}
-.dif-body{font-size:1rem;color:#8a8078;max-width:600px;margin:0 auto;font-weight:300;line-height:1.9}
-.quem{display:grid;grid-template-columns:1fr 1.5fr;max-width:1060px;margin:0 auto;padding:6rem 2rem;gap:4rem;align-items:center}
-.quem-img img{width:100%;display:block;border-radius:2px;filter:grayscale(20%) contrast(1.05)}
-.quem-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9b7e5a;display:block;margin-bottom:1rem}
-.quem h2{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:600;color:#f0ebe3;margin-bottom:1rem}
-.quem p{font-size:1rem;color:#8a8078;font-weight:300;margin-bottom:1.5rem;line-height:1.9}
-.creds{list-style:none;display:flex;flex-direction:column;gap:7px}
-.creds li{font-size:.9rem;color:#7a7269;padding-left:18px;position:relative}
-.creds li::before{content:"—";position:absolute;left:0;color:#9b7e5a}
-.depos{background:#080807;padding:6rem 2rem}
-.section-h{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:600;text-align:center;margin-bottom:3rem;color:#d4cdc4}
-.depo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;max-width:860px;margin:0 auto;background:#1a1815}
-.depo{background:#0c0b09;padding:2rem;border-left:2px solid #2a2218}
-.depo:hover{border-left-color:#9b7e5a;transition:.3s}
-.depo blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.15rem;color:#a09890;margin-bottom:1rem;line-height:1.7}
-.depo cite{font-size:.85rem;font-weight:500;color:#9b7e5a;letter-spacing:.05em;font-style:normal}
-.como{padding:6rem 2rem;max-width:660px;margin:0 auto}
-.passos{display:flex;flex-direction:column;gap:2.5rem;margin-top:.5rem}
-.passo{display:flex;gap:1.5rem;align-items:flex-start}
-.passo-n{font-family:"Cormorant Garamond",serif;font-size:3rem;font-weight:700;color:#3a3530;line-height:1;min-width:44px}
-.passo strong{display:block;font-size:1rem;font-weight:500;color:#d4cdc4;margin-bottom:4px}
-.passo p{font-size:.95rem;color:#8a8078;font-weight:300}
-/* PREÇO NOVO */
-.preco-sec{background:#0f0e0b;text-align:center;padding:6rem 2rem;border-top:1px solid #1a1815}
-.preco-contexto{font-size:1rem;color:#8a8078;max-width:560px;margin:0 auto 3rem;font-weight:300;line-height:1.9;font-style:italic}
-.preco-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;max-width:720px;margin:0 auto 2.5rem;background:#1a1815}
-.preco-card{background:#0c0b09;padding:2.5rem 2rem;text-align:center;position:relative}
-.preco-card.destaque{border:1px solid #9b7e5a}
-.preco-badge{font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#9b7e5a;background:#0f0e0b;border:1px solid #9b7e5a;padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:1rem}
-.preco-card-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#7a7269;margin-bottom:.75rem;display:block}
-.preco-card-val{font-family:"Cormorant Garamond",serif;font-size:3.2rem;font-weight:700;color:#f0ebe3;line-height:1;margin-bottom:.4rem}
-.preco-card-sub{font-size:.95rem;color:#c4bdb4;font-weight:400;margin-bottom:1.25rem;line-height:1.7}
-.preco-card-det{font-size:.88rem;color:#7a7269;font-weight:300;line-height:1.6}
-.preco-desc{font-size:1rem;color:#8a8078;max-width:500px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
-.btn-wpp-lg{display:inline-flex;align-items:center;gap:12px;background:#25d366;color:#fff;font-family:"Outfit",sans-serif;font-size:1rem;font-weight:500;padding:18px 40px;border-radius:3px;text-decoration:none;transition:.2s;margin-bottom:1.5rem}
-.btn-wpp-lg:hover{background:#1fba58;transform:translateY(-2px)}
-.preco-info{font-size:.75rem;color:#4a4540;font-weight:300}
-footer{background:#080807;text-align:center;padding:1.5rem;font-size:.75rem;color:#4a4540;border-top:1px solid #141210}
-footer a{color:#7a7269;text-decoration:none}
-footer a:hover{color:#9b7e5a}
+.hero-rodape{font-size:.82rem;color:var(--text-light);line-height:1.6}
+
+/* INDICAÇÕES */
+.indicacoes{background:var(--bg-alt);padding:4rem 2rem;text-align:center}
+.section-h{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:700;text-align:center;margin-bottom:.75rem;color:var(--text)}
+.section-sub{font-size:1rem;color:var(--text-mid);max-width:560px;margin:0 auto 2.5rem;line-height:1.8}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:0 auto}
+.ind-card{background:#fff;padding:1.5rem;border-radius:10px;border:1px solid var(--border);text-align:left;border-top:3px solid var(--teal)}
+.ind-card h3{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.5rem}
+.ind-card p{font-size:.88rem;color:var(--text-mid);line-height:1.6}
+
+/* SEP */
+.sep{border:none;height:2px;background:linear-gradient(90deg,var(--teal-light),var(--teal-mid),var(--teal-light));margin:0}
+
+/* DIFERENCIAL */
+.diferencial{padding:5rem 2rem;text-align:center;background:#fff}
+.dif-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.5;max-width:680px;margin:0 auto 1.5rem;color:var(--text);font-weight:600}
+.dif-lead strong{color:var(--teal-dark);font-style:italic}
+.dif-body{font-size:1rem;color:var(--text-mid);max-width:600px;margin:0 auto;font-weight:400;line-height:1.9}
+
+/* QUEM */
+.quem{display:grid;grid-template-columns:1fr 1.5fr;max-width:1060px;margin:0 auto;padding:5rem 2rem;gap:4rem;align-items:center;background:var(--bg-alt)}
+.quem-img img{width:100%;display:block;border-radius:12px;box-shadow:0 8px 32px rgba(61,184,168,.15)}
+.quem-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-dark);display:block;margin-bottom:1rem}
+.quem h2{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:700;color:var(--text);margin-bottom:.75rem}
+.quem-frase{font-size:1.05rem;color:var(--text);font-weight:500;margin-bottom:1rem;font-style:italic;border-left:3px solid var(--teal);padding-left:1rem}
+.quem p{font-size:.98rem;color:var(--text-mid);font-weight:400;margin-bottom:1.25rem;line-height:1.9}
+.creds{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem}
+.creds li{font-size:.9rem;color:var(--text-mid);padding-left:20px;position:relative;font-weight:400}
+.creds li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+.estagio-box{background:var(--teal-light);border:1px solid var(--teal-mid);border-radius:8px;padding:1rem 1.25rem;font-size:.88rem;color:var(--teal-dark);font-weight:500;line-height:1.6}
+
+/* DEPOIMENTOS */
+.depos{background:var(--teal-light);padding:5rem 2rem}
+.depo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:860px;margin:0 auto}
+.depo{background:#fff;padding:2rem;border-radius:10px;border-left:4px solid var(--teal);box-shadow:0 2px 12px rgba(61,184,168,.1)}
+.depo blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.1rem;color:var(--text);margin-bottom:1rem;line-height:1.7}
+.depo cite{font-size:.85rem;font-weight:600;color:var(--teal-dark);letter-spacing:.05em;font-style:normal}
+
+/* COMO */
+.como{padding:5rem 2rem;max-width:660px;margin:0 auto}
+.passos{display:flex;flex-direction:column;gap:1.25rem;margin-top:.5rem}
+.passo{display:flex;gap:1.5rem;align-items:flex-start;background:var(--bg-alt);padding:1.5rem;border-radius:10px;border:1px solid var(--border)}
+.passo-n{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:700;color:var(--teal);line-height:1;min-width:44px}
+.passo strong{display:block;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:4px}
+.passo p{font-size:.93rem;color:var(--text-mid);font-weight:400}
+
+/* SOCIAL */
+.social-sec{background:#fff;padding:3rem 2rem;text-align:center;border-top:1px solid var(--border)}
+.social-texto{font-size:1rem;color:var(--text-mid);max-width:480px;margin:0 auto 1.5rem;line-height:1.8}
+
+/* PREÇO */
+.preco-sec{background:var(--bg-alt);text-align:center;padding:5rem 2rem;border-top:2px solid var(--border)}
+.preco-contexto{font-size:1rem;color:var(--text-mid);max-width:560px;margin:0 auto 3rem;font-weight:400;line-height:1.9;font-style:italic}
+.preco-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:720px;margin:0 auto 2.5rem}
+.preco-card{background:#fff;padding:2.5rem 2rem;text-align:center;position:relative;border-radius:12px;border:2px solid var(--border);box-shadow:0 2px 16px rgba(0,0,0,.06)}
+.preco-card.destaque{border:2px solid var(--teal);box-shadow:0 4px 24px rgba(61,184,168,.2)}
+.preco-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--teal);padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:1rem}
+.preco-card-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--text-light);margin-bottom:.75rem;display:block}
+.preco-card-val{font-family:"Cormorant Garamond",serif;font-size:3.2rem;font-weight:700;color:var(--text);line-height:1;margin-bottom:.4rem}
+.preco-card-sub{font-size:.95rem;color:var(--text-mid);font-weight:400;margin-bottom:1.25rem;line-height:1.7}
+.preco-card-det{font-size:.88rem;color:var(--text-light);font-weight:400;line-height:1.6}
+.preco-social{background:var(--teal-light);border:1px solid var(--teal-mid);border-radius:8px;padding:1rem 1.5rem;max-width:500px;margin:0 auto 2rem;font-size:.9rem;color:var(--teal-dark);line-height:1.7}
+.preco-desc{font-size:1.05rem;color:var(--text);max-width:500px;margin:0 auto 2rem;font-weight:500;line-height:1.8}
+.btn-wpp-lg{display:inline-flex;align-items:center;gap:12px;background:var(--teal);color:#fff;font-family:"Outfit",sans-serif;font-size:1.05rem;font-weight:600;padding:18px 44px;border-radius:8px;text-decoration:none;transition:.2s;margin-bottom:1rem;box-shadow:0 4px 20px rgba(61,184,168,.35)}
+.btn-wpp-lg:hover{background:var(--teal-dark);transform:translateY(-2px)}
+.preco-info{font-size:.78rem;color:var(--text-light);font-weight:400}
+
+/* FOOTER */
+footer{background:var(--text);text-align:center;padding:1.5rem;font-size:.78rem;color:var(--teal-mid)}
+footer a{color:var(--teal);text-decoration:none}
+
+/* MOBILE */
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-img{height:55vw;min-height:240px}
-  .hero-img::after{background:linear-gradient(180deg,transparent 40%,#0c0b09)}
-  .hero-copy{padding:2rem 1.5rem 3.5rem}
-  .quem{grid-template-columns:1fr;padding:4rem 1.5rem;gap:2.5rem}
-  .quem-img{max-width:260px}
+  .hero-img{height:65vw;min-height:260px}
+  .hero-img::after{background:linear-gradient(180deg,transparent 20%,#ffffff 85%)}
+  .hero-copy{padding:1.5rem 1.5rem 3rem}
+  .selos{gap:6px}
+  .ind-grid{grid-template-columns:1fr}
+  .quem{grid-template-columns:1fr;padding:3.5rem 1.5rem;gap:2rem;background:var(--bg-alt)}
+  .quem-img{max-width:200px}
   .depo-grid{grid-template-columns:1fr}
   .preco-grid{grid-template-columns:1fr}
-  .diferencial,.depos,.como,.preco-sec{padding:4rem 1.5rem}
+  .indicacoes,.diferencial,.depos,.como,.preco-sec{padding:3.5rem 1.5rem}
 }
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .tag{animation:fadeUp .5s ease both}
 h1{animation:fadeUp .6s .1s ease both}
-.sub{animation:fadeUp .6s .2s ease both}
-.cta-grupo{animation:fadeUp .6s .3s ease both}
-.preco-hint{animation:fadeUp .6s .4s ease both}
+.hero-apresentacao{animation:fadeUp .6s .2s ease both}
+.selos{animation:fadeUp .6s .25s ease both}
+.btn-wpp{animation:fadeUp .6s .3s ease both}
+.hero-rodape{animation:fadeUp .6s .4s ease both}
 </style>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NS3MZWXK');</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-88ZSVDRF80"></script>
@@ -96,33 +142,70 @@ h1{animation:fadeUp .6s .1s ease both}
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS3MZWXK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-img">
-    <img src="https://files.cdn-files-a.com/uploads/11080854/800_68cae99dbc5de.jpg" alt="Carlos Toigo — Psicanalista">
+    <img src="https://files.cdn-files-a.com/uploads/11080854/800_68cae99dbc5de.jpg" alt="Carlos Toigo — Psicanalista em Caxias do Sul">
   </div>
   <div class="hero-copy">
-    <span class="tag">Psicanálise · Ansiedade</span>
-    <h1>Você já tentou de tudo.<br><em>A ansiedade continua voltando.</em></h1>
-    <p class="sub">Não é falta de força de vontade. É que o que está na raiz ainda não foi tocado. Há 10 anos ajudo pessoas a entender o que está por trás da ansiedade.</p>
-    <div class="cta-grupo">
-      <a href="https://wa.me/5554984233503?text=Ol%C3%A1%20Carlos%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." class="btn-wpp" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Quero entender minha ansiedade
-      </a>
+    <span class="tag">Psicanalista · Caxias do Sul</span>
+    <h1>Você já tentou de tudo, mas a ansiedade continua <em>e você não sabe o que fazer.</em></h1>
+    <p class="hero-apresentacao">Sou Carlos Toigo, psicanalista com 10 anos de clínica em Caxias do Sul. Atendo presencialmente e online para todo o Brasil. Estou aqui para te ajudar.</p>
+    <div class="selos">
+      <span class="selo">10 anos de clínica</span>
+      <span class="selo">Presencial · Caxias do Sul</span>
+      <span class="selo">Online · Todo o Brasil</span>
+      <span class="selo">Sigilo absoluto</span>
     </div>
-    <p class="preco-hint">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Primeira consulta <strong>R$95 · 50 minutos</strong> · Sem compromisso
-    </p>
+    <a href="https://wa.me/5554984233503?text=Ol%C3%A1%20Carlos%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." class="btn-wpp" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar comigo no WhatsApp
+    </a>
+    <p class="hero-rodape">Respondo pessoalmente · Sem formulário · Sem espera</p>
+  </div>
+</section>
+
+<!-- INDICAÇÕES -->
+<section class="indicacoes">
+  <h2 class="section-h">Posso te ajudar com</h2>
+  <p class="section-sub">A psicanálise não trata só a ansiedade. Ela trabalha o que está na raiz de diferentes formas de sofrimento.</p>
+  <div class="ind-grid">
+    <div class="ind-card">
+      <h3>😰 Ansiedade e Pânico</h3>
+      <p>Crises, angústia constante, medo sem nome. Quando o corpo fala o que a mente ainda não sabe dizer.</p>
+    </div>
+    <div class="ind-card">
+      <h3>😔 Depressão e Tristeza</h3>
+      <p>Vazio, falta de sentido, cansaço que não passa. Quando nada parece ter cor ou direção.</p>
+    </div>
+    <div class="ind-card">
+      <h3>💔 Relacionamentos</h3>
+      <p>Padrões que se repetem, vínculos que machucam, dificuldade de se aproximar ou se separar.</p>
+    </div>
+    <div class="ind-card">
+      <h3>🔄 Repetição e Bloqueios</h3>
+      <p>A sensação de estar preso no mesmo lugar, tomando as mesmas decisões, com os mesmos resultados.</p>
+    </div>
+    <div class="ind-card">
+      <h3>🧠 Autoconhecimento</h3>
+      <p>Para quem quer entender melhor quem é, o que quer e por que age da forma que age.</p>
+    </div>
+    <div class="ind-card">
+      <h3>😤 Estresse e Burnout</h3>
+      <p>Esgotamento, irritabilidade, sensação de que não há mais fôlego. Quando o corpo pede parada.</p>
+    </div>
   </div>
 </section>
 
 <hr class="sep">
 
+<!-- DIFERENCIAL -->
 <section class="diferencial">
   <p class="dif-lead">A maioria das abordagens trata o sintoma.<br><strong>A psicanálise vai atrás do que o criou.</strong></p>
   <p class="dif-body">Respiração, meditação, TCC — funcionam enquanto você está fazendo. Param de fazer, o peso volta. Porque o que está na raiz não foi tocado.<br><br>A psicanálise não silencia o sofrimento — trabalha para entender o que ele está dizendo. Quando a causa é endereçada, o sintoma não precisa mais aparecer.</p>
 </section>
 
+<!-- QUEM -->
 <section class="quem">
   <div class="quem-img">
     <img src="https://files.cdn-files-a.com/uploads/11080854/800_68cae99dbc5de.jpg" alt="Carlos Toigo — Psicanalista">
@@ -130,16 +213,21 @@ h1{animation:fadeUp .6s .1s ease both}
   <div>
     <span class="quem-label">Quem vai te atender</span>
     <h2>Carlos A. Toigo</h2>
-    <p>Psicanalista com 10 anos de clínica. Especialização em neuropsicanálise e psicanálise contemporânea.<br><br>Atendo presencialmente em Caxias do Sul e online para todo o Brasil.</p>
+    <p class="quem-frase">Estou aqui para te ajudar a entender o que está acontecendo — sem julgamento, sem protocolo, sem pressa.</p>
+    <p>Psicanalista com 10 anos de clínica, especializado em neuropsicanálise e psicanálise lacaniana. Atendo presencialmente em Caxias do Sul e online para todo o Brasil.</p>
     <ul class="creds">
       <li>Especialista em Psicanálise Lacaniana</li>
       <li>Especialista em Neuropsicoanálise Aplicada</li>
       <li>Psicanálise Contemporânea</li>
       <li>Mestre em formação — supervisão e clínica</li>
     </ul>
+    <div class="estagio-box">
+      🎓 <strong>Programa de estágio para psicanalistas</strong> — Mentoro psicanalistas em início de prática clínica e indico atendimentos sociais para quem precisa de acesso a valores acessíveis.
+    </div>
   </div>
 </section>
 
+<!-- DEPOIMENTOS -->
 <section class="depos">
   <h2 class="section-h">O que dizem os pacientes</h2>
   <div class="depo-grid">
@@ -150,38 +238,42 @@ h1{animation:fadeUp .6s .1s ease both}
   </div>
 </section>
 
+<!-- COMO FUNCIONA -->
 <section class="como">
   <h2 class="section-h">Como funciona</h2>
   <div class="passos">
     <div class="passo"><span class="passo-n">1</span><div><strong>Você manda uma mensagem no WhatsApp</strong><p>Sem formulário, sem triagem, sem espera. Você fala diretamente comigo.</p></div></div>
-    <div class="passo"><span class="passo-n">2</span><div><strong>Agendamos a primeira consulta</strong><p>50 minutos onde vou entender o que está acontecendo — sem julgamento, sem protocolo.</p></div></div>
-    <div class="passo"><span class="passo-n">3</span><div><strong>Você decide se quer continuar</strong><p>Sem compromisso. Após a primeira sessão você tem clareza sobre o que está acontecendo.</p></div></div>
+    <div class="passo"><span class="passo-n">2</span><div><strong>Agendamos a primeira consulta</strong><p>50 minutos para entender o que está acontecendo — sem julgamento, sem protocolo.</p></div></div>
+    <div class="passo"><span class="passo-n">3</span><div><strong>Você decide se quer continuar</strong><p>Sem compromisso. Após a primeira sessão você tem mais clareza sobre o que está vivendo.</p></div></div>
   </div>
 </section>
 
+<!-- PREÇO -->
 <section class="preco-sec">
-  <p class="preco-contexto">Em tempos de incerteza, cuidar da saúde mental não é luxo — é o que permite atravessar os desafios sem adoecer. Por isso ofereço condições acessíveis para quem quer começar agora.</p>
-
+  <h2 class="section-h">Investimento</h2>
+  <p class="preco-contexto">Em tempos de incerteza, cuidar da saúde mental não é luxo — é o que permite atravessar os desafios sem adoecer.</p>
   <div class="preco-grid">
     <div class="preco-card destaque">
       <span class="preco-badge">Mais escolhido</span>
       <span class="preco-card-label">Pacote mensal</span>
       <div class="preco-card-val">R$340</div>
       <div class="preco-card-sub">4 sessões · R$85 cada<br>Pix antecipado · Agenda garantida</div>
-      <div class="preco-card-det">A forma mais eficaz de trabalhar na psicanálise — continuidade semanal com valor acessível.</div>
+      <div class="preco-card-det">Continuidade semanal — a forma mais eficaz de trabalhar na psicanálise.</div>
     </div>
     <div class="preco-card">
       <span class="preco-card-label">Sessão avulsa</span>
       <div class="preco-card-val">R$95</div>
-      <div class="preco-card-sub">50 minutos<br>Pix antecipado</div>
+      <div class="preco-card-sub">50 minutos · Pix antecipado</div>
       <div class="preco-card-det">Para quem quer começar sem compromisso de continuidade.</div>
     </div>
   </div>
-
-  <p class="preco-desc">Você não precisa continuar carregando isso sozinho. Manda uma mensagem agora — respondo pessoalmente.</p>
+  <div class="preco-social">
+    💙 <strong>Atendimento social disponível</strong> — Tenho vagas com valores reduzidos para quem precisa de acesso ao cuidado psicanalítico. Me conta sua situação e conversamos.
+  </div>
+  <p class="preco-desc">Estou aqui para te ajudar.<br>Manda uma mensagem — respondo pessoalmente.</p>
   <a href="https://wa.me/5554984233503?text=Ol%C3%A1%20Carlos%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." class="btn-wpp-lg" target="_blank" rel="noopener">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Agendar pelo WhatsApp
+    Falar comigo no WhatsApp
   </a>
   <br>
   <p class="preco-info">Presencial em Caxias do Sul · Online para todo o Brasil · Google Meet</p>
